@@ -1,6 +1,19 @@
 // Modal de bienvenida
-var nombre = prompt("Hi, type your name please! 😊")
-alert("welcome home " + nombre + "!");
+window.onload
+document.getElementById('welcome-modal').style.display='flex';
+
+
+// Guardando datos en LocalStorage y creando la variable nombre de usuario para el Home
+var datosUsuario = {"nombre":""}
+
+function enviarUsuario(){
+   datosUsuario.nombre = document.getElementById('nombre').value;
+   document.getElementById('welcome-modal').style.display='none';
+    localStorage.setItem('datosModal', JSON.stringify(datosUsuario))
+
+    var nombreUsuario = datosUsuario.nombre.toLowerCase() 
+    document.getElementById('name').innerHTML = nombreUsuario;
+}
 
 
 // Creando objetos
@@ -16,5 +29,11 @@ function Producto(talles, colores, stock){
 var producto1 = new Producto (talles, colores, true);
 var producto2 = new Producto (talles, colores, true);
 var producto3 = new Producto (talles, colores, true);
+var producto4 = new Producto (talles, colores, true);
+var producto5 = new Producto (talles, colores, true);
+var producto6 = new Producto (talles, colores, true);
+var producto7 = new Producto (talles, colores, true);
+var producto8 = new Producto (talles, colores, true);
+var producto9 = new Producto (talles, colores, true);
 
-var productos = [producto1, producto2, producto3];
+var productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9,];

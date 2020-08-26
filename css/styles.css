@@ -1,4 +1,99 @@
 body{background-color: #fdbf2d;}
+
+/* Modal de bienvenida */
+#welcome-modal{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000000a4;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#welcome-modal .modal{
+    width: 25%;
+    height: 70%;
+    background-color: #fff;
+    border-radius: 10px;
+    animation: modal .5s;
+}
+
+@keyframes modal{
+    0%{opacity: 0; }
+    100%{opacity: 1;}
+}
+
+.modal .box-img-modal{
+    width: 100%;
+    height: 65%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.box-img-modal img{
+    max-width: 100%;
+}
+
+.modal .form-modal{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-modal h1{
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -1px;
+    margin: 1rem 0;
+}
+.form-modal > label{display: none;}
+.form-modal #modal-form > input[type=text] {
+    width: 80%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    padding: 7px;
+}
+
+.form-modal ::placeholder{border-bottom: 1px solid rgba(255, 255, 255, 0.63);}
+
+#modal-form{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: center;
+}
+
+.form-modal #modal-form > input[type=button] {
+    width: 40%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    letter-spacing: -1px;
+    padding: 8px;
+    margin: .7rem 0;
+    cursor: pointer;
+}
+.form-modal #modal-form > input[type=button]:hover{background-color: rgba(0, 0, 0, 0.911);}
+input:focus{
+    outline: 0px;
+}
+
+
 /* Barra de navegación del HOME */
 .navegation-bar{
     width: 100%;
@@ -382,6 +477,17 @@ footer h1{
 
 /* Mobile S, M, L */
 @media screen and (min-width: 1500px) and (max-width: 2600px){
+    /* Modal */
+    #welcome-modal .modal{height: 70%;}
+    .form-modal h1{font-size: 25px; margin: 1.4rem 0;}
+    .form-modal #modal-form > input[type=text]{width: 90%; padding: 7px;}
+    .form-modal #modal-form > input[type=button]{
+        width: 50%;
+        font-size: 16px;
+        margin: .7rem 0;
+        padding: 12px;
+    }
+    /* Pantalla de Bienvenida */
     .welcome-box h1{font-size: 40px;}
     .text-nav a{font-size: 26px;}
     .box-logo img{max-width: 80px;}
@@ -411,6 +517,17 @@ footer h1{
     footer .back-top{font-size: 24px;}
 }
 @media screen and (max-width: 768px) and (min-width: 320px){
+    /* Modal */
+    #welcome-modal .modal{height: 70%; width: 80%;}
+    .form-modal h1{font-size: 16px; margin: 1rem 0;}
+    .form-modal #modal-form > input[type=text]{width: 70%; padding: 5px;}
+    .form-modal #modal-form > input[type=button]{
+        width: 50%;
+        font-size: 12px;
+        margin: .4rem 0;
+        padding: 7px;
+    }
+
     /* Home */
     .box-image{
         display: flex;

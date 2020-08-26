@@ -13,7 +13,7 @@
 <body>
     <nav class="navegation-bar">
         <div class="text-nav">
-            <a href="#">home</a>
+            <a href="index.html">home</a>
             <a href="views/shop.html">shop</a>
         </div>
         <div class="box-logo">
@@ -24,6 +24,21 @@
             <img src="assets/img/icons/supermercado.png" alt="Icon">
         </div>
     </nav>
+    <section id="welcome-modal">
+        <div class="modal">
+            <div class="box-img-modal">
+                <img src="assets/img/resources/modal-img.jpg" alt="Imagen del modal">
+            </div>
+            <div class="form-modal">
+                <h1>enter your name!</h1>
+                <form action="index.html" method="post" id="modal-form">
+                    <label for="name"></label>
+                        <input type="text" placeholder=" " name="name" id="nombre" required>
+                        <input type="button" name="button" id="enviar" onclick="enviarUsuario();" value="let's go!">
+                </form>
+            </div>
+        </div>
+    </section>
     <section class="main-home">
         <div class="box-image">
             <img src="assets/img/resources/home-img.jpg" alt="Imagen de campaña">
