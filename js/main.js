@@ -1,20 +1,24 @@
 // Modal de bienvenida
-window.onload
-document.getElementById('welcome-modal').style.display='flex';
+setTimeout(function() {
+    document.getElementById('welcome-modal').style.display='flex';
+}, 1000);
 
 
 // Guardando datos en LocalStorage y creando la variable nombre de usuario para el Home
 var datosUsuario = {"nombre":""}
 
-function enviarUsuario(){
-   datosUsuario.nombre = document.getElementById('nombre').value;
-   document.getElementById('welcome-modal').style.display='none';
+const enviarUsuario = document.getElementById('enviar');
+
+enviarUsuario.addEventListener("click", function(event){
+    event.preventDefault()
+    datosUsuario.nombre = document.getElementById('nombre').value;
+    document.getElementById('welcome-modal').style.display='none';
     localStorage.setItem('datosModal', JSON.stringify(datosUsuario))
 
     var nombreUsuario = datosUsuario.nombre.toLowerCase() 
-    document.getElementById('name').innerHTML = nombreUsuario;
-}
-
+    document.getElementById('name').innerText = nombreUsuario;
+    console.log(nombreUsuario);
+})
 
 // Creando objetos
 var colores = ['white', 'beige', 'black', 'red', 'blue'];
