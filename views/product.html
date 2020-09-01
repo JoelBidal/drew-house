@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drew House</title>
     <link rel="shortcut icon" href="../assets/fav-icon.png" type="image/x-icon">
-    <!-- <script defer src="../js/main.js"></script> -->
+    <script defer src="../js/main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <nav class="navegation-bar" style="background-color: #fdbf2d;">
+    <nav class="navegation-bar">
         <div class="text-nav">
-            <a href="../views/shop.html">back</a>
+            <a href="../index.html">home</a>
+            <a href="../views/shop.html">shop</a>
         </div>
         <div class="box-logo">
             <a href="../index.html"><img src="../assets/img/resources/logo.png" alt="Drew House Logo"></a>
         </div>
         <div class="box-icon">
-            <h1>0/$0.00</h1>
+            <span id="cart-price">0</span>
             <img src="../assets/img/icons/supermercado.png" alt="Icon">
-        </div>
+        </div> 
     </nav>
     <section class="product">
         <div class="col-left">
@@ -64,7 +65,7 @@
                 <option value="4">blue</option>
             </select> <br>
             <form class="form-product" action="#" method="POST">
-                <input type="submit" value="add to cart">
+                <input type="button" id="addCart" value="add to cart">
                 <br>
                 <input type="submit" value="buy now">
             </form>
@@ -90,7 +91,7 @@
             <li><a href="#">Size Chart</a></li>
             <li><a href="#">Do Not Sell My Info</a></li>
         </ul>
-        <h1>Copyright © 2020 Drew House.</h1>
+        <h2>Copyright © 2020 Drew House.</h2>
     </footer>
 </body>
 </html>

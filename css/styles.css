@@ -47,7 +47,7 @@ body{background-color: #fdbf2d;}
     justify-content: center;
 }
 
-.form-modal h1{
+.form-modal h2{
     width: 100%;
     text-align: center;
     color: #000;
@@ -106,7 +106,10 @@ input:focus{
     justify-content: space-around;
     align-items: center;
     z-index: 1;
+    background-color: #fdbf2d;
 }
+
+.nav-index{background-color: transparent;}
 
 .text-nav,
 .box-logo,
@@ -133,7 +136,7 @@ input:focus{
 
 .box-icon img{max-width: 25px;}
 
-.box-icon h1{
+.box-icon #cart-price{
     color: #000;
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
@@ -168,7 +171,7 @@ input:focus{
     justify-content: center;
 }
 
-.welcome-box h1{
+.welcome-box h2{
     font-family: 'Roboto Mono', monospace;
     font-weight: 600;
     font-size: 28px;
@@ -224,7 +227,7 @@ input:focus{
     margin-bottom: 100px;
 }
 
-.name-collection h1{
+.name-collection h2{
     font-size: 40px;
     color: #000;
     font-weight: 600;
@@ -262,7 +265,7 @@ input:focus{
 
 .unity a:hover{opacity: 70%;}
 
-.products h1{
+.products .name-product{
     font-size: 16px;
     font-weight: 300;
     color: #000;
@@ -272,7 +275,7 @@ input:focus{
     margin: 5px 0 10px 0;
 }
 
-.products span{
+.products .price-product{
     font-size: 18px;
     font-weight: 600;
     color: #000;
@@ -459,7 +462,7 @@ footer .back-top{
 }
 
 footer ul li a,
-footer h1{
+footer h2{
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
@@ -470,7 +473,7 @@ footer h1{
 }
 
 footer ul,
-footer h1{
+footer h2{
     margin: 30px 0 0 80px;
 }
 
@@ -514,7 +517,7 @@ footer h1{
     /* Footer */
     .box-newsletter input{padding: 25px 40px; font-size: 22px;}
     .box-newsletter input[type=submit]{padding: 25px;}
-    footer ul li a, footer h1{font-size: 22px; line-height:44px;}
+    footer ul li a, footer h2{font-size: 22px; line-height:44px;}
     footer .back-top{font-size: 24px;}
 }
 @media screen and (max-width: 768px) and (min-width: 320px){

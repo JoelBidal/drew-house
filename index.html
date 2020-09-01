@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="navegation-bar">
+ <nav class="navegation-bar nav-index">
         <div class="text-nav">
             <a href="index.html">home</a>
             <a href="views/shop.html">shop</a>
@@ -20,9 +20,9 @@
             <a href="index.html"><img src="assets/img/resources/logo.png" alt="Drew House Logo"></a>
         </div>
         <div class="box-icon">
-            <h1>0/$0.00</h1>
+            <span id="cart-price">0</span>
             <img src="assets/img/icons/supermercado.png" alt="Icon">
-        </div>
+        </div> 
     </nav>
     <section id="welcome-modal">
         <div class="modal">
@@ -30,7 +30,7 @@
                 <img src="assets/img/resources/modal-img.jpg" alt="Imagen del modal">
             </div>
             <div class="form-modal">
-                <h1>enter your name!</h1>
+                <h2>enter your name!</h2>
                 <form action="index.html" method="post" id="modal-form">
                     <label for="name"></label>
                         <input type="text" placeholder=" " name="name" id="nombre" required>
@@ -44,7 +44,7 @@
             <img src="assets/img/resources/home-img.jpg" alt="Imagen de campaña">
         </div>
         <div class="welcome-box">
-            <h1>hi <span id="name"></span>, welcome home</h1>
+            <h2>hi <span id="name"></span>, welcome home</h2>
             <a href="views/shop.html">closet</a>
         </div>
     </section>
