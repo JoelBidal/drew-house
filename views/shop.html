@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drew House</title>
     <link rel="shortcut icon" href="../assets/fav-icon.png" type="image/x-icon">
-    <script defer src="../js/main.js"></script>
+    <script defer src="../js/shop.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -20,7 +20,7 @@
             <a href="../index.html"><img src="../assets/img/resources/logo.png" alt="Drew House Logo"></a>
         </div>
         <div class="box-icon">
-            <span id="cart-price">0</span>
+            <span id="cart-price">0.00</span>
             <img src="../assets/img/icons/supermercado.png" alt="Icon">
         </div> 
     </nav>
@@ -34,12 +34,12 @@
             <h2>august collection</h2>
             <div>
                 <label for="clothes">Sort by:</label>
-                <select class="clothes-select" name="clothes" id="clothes">
-                    <option value="0">all clothes</option>
-                    <option value="1">t-shirts</option>
-                    <option value="2">jeans & shorts</option>
-                    <option value="3">hoodies & jackets</option>
-                    <option value="4">accessories</option>
+                <select class="clothes-select" name="clothes" id="selectFild">
+                    <option value="all" class="option">all clothes</option>
+                    <option value="shirts" class="option">t-shirts</option>
+                    <option value="jeans" class="option">jeans & shorts</option>
+                    <option value="hoodies" class="option">hoodies & jackets</option>
+                    <option value="accesories" class="option">accessories</option>
                 </select>
             </div>
         </div>

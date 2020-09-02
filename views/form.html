@@ -5,12 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drew House</title>
     <link rel="shortcut icon" href="/assets/fav-icon.png" type="image/x-icon">
-    <!-- <script defer src="js/main.js"></script> -->
+    <!-- <script defer src="../js/main.js"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-
+    <nav class="navegation-bar">
+        <div class="text-nav">
+            <a href="../views/product.html">back</a>
+        </div>
+        <div class="box-logo">
+            <a href="../index.html"><img src="../assets/img/resources/logo.png" alt="Drew House Logo"></a>
+        </div>
+        <div class="box-icon">
+            <span id="cart-price">0.00</span>
+            <img src="../assets/img/icons/supermercado.png" alt="Icon">
+        </div> 
+    </nav>
+    <section class="product">
+        <div class="col-left">
+            <div class="product-detail">
+                <div class="box-image-product-form">
+                    <img class="img-selected" src="../assets/img/clothes/00.jpg" alt="t-shirt drew house">
+                </div>
+                <div class="detail">
+                    <h2>secret ss tee - white</h2>
+                    <span id="price">$48.00</span>
+                    <h3>purchasing information</h3>
+                    <ul>
+                        <li>1 vol</li>
+                        <li>XL</li>
+                        <li>white</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="formulario">
+                <h2>Hey, complete the form!</h2>
+                <form class="formulario-compra" action="#" method="post">
+                    <input type="text" name="name" id="medium" placeholder="full name"><br>
+                    <input type="text" name="country" id="medium" placeholder="country"><br>
+                    <input type="text" name="card-number" id="large" placeholder="card number"><br>
+                    <input type="text" name="expiration" id="medium" placeholder="expiration date"><br>
+                    <input type="text" name="security-code" id="medium" placeholder="security code"><br>
+                    <input type="email" name="email" id="large" placeholder="email adress">
+                </form>
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="box-card">
+                <img src="../assets/img/resources/credit-card.png" alt="Credit card">
+            </div>
+            <div class="buttons">
+                <a href="form.html" class="buy" id="buyNow">buy now</a>
+            </div>
+        </div>
+    </section>
+    <div class="box-newsletter">
+        <form action="#" method="POST">
+            <input type="email" name="email" placeholder="email" required>
+            <input type="submit" value=">">
+        </form>
+    </div>
+    <footer>
+        <a class="back-top" href="#">Back to the top ^</a>
+        <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">International</a></li>
+            <li><a href="#">Customs & Duties</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms Of Use</a></li>
+            <li><a href="#">Size Chart</a></li>
+            <li><a href="#">Do Not Sell My Info</a></li>
+        </ul>
+        <h2>Copyright © 2020 Drew House.</h2>
+    </footer>
 </body>
 </html>

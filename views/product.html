@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drew House</title>
     <link rel="shortcut icon" href="../assets/fav-icon.png" type="image/x-icon">
-    <script defer src="../js/main.js"></script>
+    <script defer src="../js/product.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -20,7 +20,7 @@
             <a href="../index.html"><img src="../assets/img/resources/logo.png" alt="Drew House Logo"></a>
         </div>
         <div class="box-icon">
-            <span id="cart-price">0</span>
+            <span id="cart-price">0.00</span>
             <img src="../assets/img/icons/supermercado.png" alt="Icon">
         </div> 
     </nav>
@@ -38,7 +38,7 @@
         </div>
         <div class="col-right">
             <h1>secret ss tee - white</h1>
-            <span>$48.00</span>
+            <span id="priceProduct">$48.00</span>
             <div class="form">
             <label for="volume">volume:</label>
             <select name="volume" id="volume">
@@ -63,12 +63,11 @@
                 <option value="2">black</option>
                 <option value="3">red</option>
                 <option value="4">blue</option>
-            </select> <br>
-            <form class="form-product" action="#" method="POST">
-                <input type="button" id="addCart" value="add to cart">
-                <br>
-                <input type="submit" value="buy now">
-            </form>
+            </select>
+            <div class="buttons">
+                <a href="#" id="addCart">add to cart</a>
+                <a href="form.html" id="buyNow">buy now</a>
+            </div>
             </div>
         </div>
     </section>
