@@ -36,12 +36,12 @@ window.onload = () => {
   productos.forEach((producto) => {
     productosColeccion.innerHTML += crearProducto(producto);
   });
-  // --------------
+
   sortBy.addEventListener('change', event => {
   event.preventDefault();
     
   let resultadoFiltro = selected.value;
-    
+  console.log(resultadoFiltro)
   let productosElegidos = productos.filter(producto =>{
     return producto.categoria.toLowerCase().includes(resultadoFiltro.toLowerCase)
   })
@@ -60,10 +60,3 @@ function crearProducto(producto) {
   <span class="price-product">$${producto.precio}.00</span>
   </div>`;
 }
-
-// Arrays con los productos de mi select > option
-// var all = [productos];
-// var shirts = ['secret ss tee -white', 'corduroy ss shirt - chocolate'];
-// var jeans = ['corduroy shorts - chocolate','distressed jean - vintage indigo'];
-// var hoodies = ['mixed media trucker jacket - bleached'];
-// var accessories = ['striped mascot socks - black/golden', 'mascot skate deck - iceberg roses', 'drew house space sticker sheet', 'mascot skate deck - iceberg roses'];

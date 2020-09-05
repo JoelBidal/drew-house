@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drew House</title>
-    <link rel="shortcut icon" href="/assets/fav-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/fav-icon.png" type="image/x-icon">
     <!-- <script defer src="../js/main.js"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
@@ -23,6 +23,18 @@
             <img src="../assets/img/icons/supermercado.png" alt="Icon">
         </div> 
     </nav>
+    <!-- Modal de exito por la compra -->
+    <section id="welcome-modal">
+        <div class="modal">
+            <div class="box-img-modal">
+                <img src="../assets/img/resources/modal-img.jpg" alt="Imagen del modal de exito">
+            </div>
+            <div class="form-modal">
+              <a href="shop.html">go shop!</a>
+            </div>
+        </div>
+    </section>
+
     <section class="product">
         <div class="col-left">
             <div class="product-detail">
@@ -53,8 +65,31 @@
             </div>
         </div>
         <div class="col-right">
-            <div class="box-card">
-                <img src="../assets/img/resources/credit-card.png" alt="Credit card">
+            <div class="container-card">
+                <div id="card-front">
+                    <div class="box-logo-card">
+                        <img src="../assets/img/resources/mastercard.png" alt="Card credit logo">
+                    </div>
+                    <div class="box-card-number">
+                        <span id="card-number">1200 2312 3103 1230</span>
+                    </div>
+                    <div class="datos-fijos">
+                        <h2>card name</h2>
+                        <h2>valid date</h2>
+                    </div>
+                    <div class="card-info">
+                        <span id="card-name">Mauricio Estollmer</span>
+                        <span id="expire-date">04/23</span>
+                    </div>
+                </div>
+                <div id="card-back">
+                    <div class="box-card-code">
+                        <span id="security-code">404</span>
+                    </div>
+                    <div class="box-logo-card">
+                        <img src="../assets/img/resources/mastercard.png" alt="Card credit logo">
+                    </div>
+                </div>
             </div>
             <div class="buttons">
                 <a href="form.html" class="buy" id="buyNow">buy now</a>
