@@ -1,14 +1,14 @@
 // Datos con los productos de la tienda
 var productosJSON = `[
-  {"nombre":"secret ss tee -white", "precio":48.00, "imagen":"../assets/img/clothes/00.jpg", "categoria": "shirts"},
-  {"nombre":"corduroy ss shirt - chocolate", "precio":148.00, "imagen":"../assets/img/clothes/01.jpg", "categoria": "shirts"},
-  {"nombre":"corduroy shorts - chocolate", "precio":138.00, "imagen":"../assets/img/clothes/02.jpg", "categoria": "jeans"},
-  {"nombre":"striped mascot socks - black/golden", "precio":20.00, "imagen":"../assets/img/clothes/03.jpg", "categoria": "accessories"},
-  {"nombre":"distressed jean - vintage indigo", "precio":278.00, "imagen":"../assets/img/clothes/04.jpg", "categoria": "jeans"},
-  {"nombre":"mascot skate deck - iceberg roses", "precio":58.00, "imagen":"../assets/img/clothes/05.jpg", "categoria": "accessories"},
-  {"nombre":"mixed media trucker jacket - bleached", "precio":448.00, "imagen":"../assets/img/clothes/06.jpg", "categoria": "hoodies"},
-  {"nombre":"drew house space sticker sheet", "precio":10.00, "imagen":"../assets/img/clothes/07.jpg", "categoria": "accessories"},
-  {"nombre":"dinodrew skate deck - burnt oronge", "precio":58.00, "imagen":"../assets/img/clothes/08.jpg", "categoria": "accessories"}
+  {"nombre":"secret ss tee -white", "precio":48.00, "imagen":"../assets/img/clothes/00.jpg", "categoria": "shirts all"},
+  {"nombre":"corduroy ss shirt - chocolate", "precio":148.00, "imagen":"../assets/img/clothes/01.jpg", "categoria": "shirts all"},
+  {"nombre":"corduroy shorts - chocolate", "precio":138.00, "imagen":"../assets/img/clothes/02.jpg", "categoria": "jeans all"},
+  {"nombre":"striped mascot socks - black/golden", "precio":20.00, "imagen":"../assets/img/clothes/03.jpg", "categoria": "accessories all"},
+  {"nombre":"distressed jean - vintage indigo", "precio":278.00, "imagen":"../assets/img/clothes/04.jpg", "categoria": "jeans all"},
+  {"nombre":"mascot skate deck - iceberg roses", "precio":58.00, "imagen":"../assets/img/clothes/05.jpg", "categoria": "accessories all"},
+  {"nombre":"mixed media trucker jacket - bleached", "precio":448.00, "imagen":"../assets/img/clothes/06.jpg", "categoria": "hoodies all"},
+  {"nombre":"drew house space sticker sheet", "precio":10.00, "imagen":"../assets/img/clothes/07.jpg", "categoria": "accessories all"},
+  {"nombre":"dinodrew skate deck - burnt oronge", "precio":58.00, "imagen":"../assets/img/clothes/08.jpg", "categoria": "accessories all"}
 ]`;
 
 class producto {
@@ -43,7 +43,7 @@ window.onload = () => {
   let resultadoFiltro = selected.value;
   console.log(resultadoFiltro)
   let productosElegidos = productos.filter(producto =>{
-    return producto.categoria.toLowerCase().includes(resultadoFiltro.toLowerCase)
+    return producto.categoria.toLowerCase().includes(resultadoFiltro.toLowerCase())
   })
 
   productosColeccion.innerHTML = '';
