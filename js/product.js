@@ -7,3 +7,14 @@ agregarCarrito.addEventListener("click", (e) => {
   let valorActual = contador.innerHTML;
   contador.innerHTML = parseInt(valorActual) + 1;
 });
+
+// Abrir carrito
+  cart = document.getElementById('box-cart')
+  cart.addEventListener("click", function(c){
+    document.getElementById('cart').style.display='block';
+})
+
+  closeCart = document.getElementById('continue')
+  closeCart.addEventListener('click', function(){
+    document.getElementById('cart').style.display='none';
+})

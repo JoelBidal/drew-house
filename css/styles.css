@@ -1,4 +1,8 @@
-body{background-color: #fdbf2d;}
+body{
+    background-color: #fdbf2d;
+    font-family: 'Roboto Mono', monospace;
+    overflow-x: hidden;
+}
 
 /* Modal de bienvenida */
 #welcome-modal{
@@ -50,7 +54,6 @@ body{background-color: #fdbf2d;}
     width: 100%;
     text-align: center;
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: -1px;
@@ -63,7 +66,6 @@ body{background-color: #fdbf2d;}
     border: none;
     background-color: #000;
     color: #fff;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     padding: 7px;
 }
@@ -82,7 +84,6 @@ body{background-color: #fdbf2d;}
     border: none;
     background-color: #000;
     color: #fff;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     letter-spacing: -1px;
     padding: 8px;
@@ -93,7 +94,6 @@ body{background-color: #fdbf2d;}
 input:focus{
     outline: 0px;
 }
-
 
 /* Barra de navegación del HOME */
 .navegation-bar{
@@ -123,7 +123,6 @@ input:focus{
 
 .text-nav a{
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
@@ -138,10 +137,10 @@ input:focus{
 
 .box-icon #cart-price{
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     font-size: 14px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 /* Sección principal del HOME */
@@ -172,7 +171,6 @@ input:focus{
 }
 
 .welcome-box h2{
-    font-family: 'Roboto Mono', monospace;
     font-weight: 600;
     font-size: 28px;
     letter-spacing: -1px;
@@ -185,13 +183,71 @@ input:focus{
     background-color: #000;
     padding: 10px 40px;
     margin-top: 12px;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     font-size: 15px;
     text-decoration: none;
 }
 
 .welcome-box a:hover{text-decoration: underline;}
+
+/* Carrito */
+#cart{
+    width: 30%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #fdbf2d;
+    z-index: 2;
+    animation: cart .4s;
+}
+
+@keyframes cart{
+    0%{right: -30%; opacity: 0;}
+    100%{right: 0; opacity: 1;}
+}
+
+#cart #continue,
+#cart .total{
+    background-color: #eeb93b;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#continue h2,
+.total h2{
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cart .order{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #9268071f;
+}
+
+.order .my-order{
+    font-size: 20px;
+    padding: 20px;
+    font-weight: 600;
+}
+
+.order #items{
+    font-size: 16px;
+    padding: 20px;
+}
+
+#cart .total{
+    justify-content: space-between;
+    padding: 0 25px;
+}
 
 /* Shop */
 .main-shop{
@@ -231,7 +287,6 @@ input:focus{
     font-size: 40px;
     color: #000;
     font-weight: 600;
-    font-family: 'Roboto Mono', monospace;
     text-decoration: underline;
     letter-spacing: -1px;
 }
@@ -240,15 +295,14 @@ input:focus{
     font-size: 16px;
     color: #000;
     font-weight: 600;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
 }
 
 .clothes-select{
+    font-family: 'Roboto Mono', monospace;
     border: none;
     padding: 5px;
     color: #000;
-    font-family: 'Roboto Mono', monospace;
 }
 
 .clothes-select:focus,
@@ -272,7 +326,6 @@ input:focus{
     font-size: 16px;
     font-weight: 300;
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
     line-height: 15px;
     margin: 5px 0 10px 0;
@@ -282,7 +335,6 @@ input:focus{
     font-size: 18px;
     font-weight: 600;
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
     text-align: left;
 }
@@ -310,8 +362,8 @@ form{
     background-color: #fff;
     border: none;
     color: rgba(0, 0, 0, 0.658);
-    font-weight: 600;
     font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
     letter-spacing: -1px;
     padding: 15px;
 }
@@ -322,7 +374,6 @@ form{
     border: none;
     color: rgba(0, 0, 0, 0.658);
     font-weight: 600;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
     padding: 12px;
     border-left: 1px solid rgba(0, 0, 0, 0.3);
@@ -390,7 +441,6 @@ form{
     width: 100%;
     font-weight: 600;
     font-size: 35px;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
     margin: 10px 0;
 }
@@ -399,7 +449,6 @@ form{
     width: 100%;
     font-weight: 300;
     font-size: 30px;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
     margin: 10px 0;
 }
@@ -424,7 +473,6 @@ form{
 .col-right .form label{
     font-weight: 600;
     font-size: 20px;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
 }
 
@@ -445,7 +493,6 @@ form{
     padding: 10px 40px;
     font-weight: 300;
     font-size: 15px;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
     text-align: center;
     margin: 5px 0;
@@ -467,7 +514,6 @@ form{
 }
 .detail h2, .detail h3{
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 5px;
@@ -477,7 +523,6 @@ form{
 
 .detail #price, .detail ul li{
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     font-size: 20px;
 }
@@ -496,7 +541,6 @@ form{
 
 .formulario h2{
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 600;
     font-size: 20px;
     text-decoration: underline;
@@ -516,8 +560,8 @@ form{
     width: 30%;
     padding: 8px 16px;
     border: none;
-    color: #000;
     font-family: 'Roboto Mono', monospace;
+    color: #000;
     margin: 5px;
 }
 
@@ -566,7 +610,6 @@ form{
 .box-card-number #card-number{
     color: #fff;
     font-size: 20px;
-    font-family: 'Roboto Mono', monospace;
 }
 
 .card-info, .datos-fijos{
@@ -582,7 +625,6 @@ form{
     height: auto;
     color: #fff;
     font-size: 12px;
-    font-family: 'Roboto Mono', monospace;
     margin-top: 30px;
     letter-spacing: 0;
     text-transform: uppercase;
@@ -592,7 +634,6 @@ form{
 .card-info #expire-date{
     color: #fff;
     font-size: 16px;
-    font-family: 'Roboto Mono', monospace;
     text-transform: uppercase;
 }
 
@@ -623,7 +664,6 @@ form{
     font-size: 20px;
     font-weight: 600;
     margin-right: 10px;
-    font-family: 'Roboto Mono', monospace;
 }
 
 /* Boton comprar */
@@ -675,7 +715,6 @@ form{
 
 .modal-2 h2{
     width: 70%;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: -1px;
@@ -701,7 +740,6 @@ form{
     width: 100%;
     text-align: center;
     color: #fff;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     font-size: 16px;
     letter-spacing: -1px;
@@ -720,7 +758,6 @@ footer .back-top{
     font-size: 14px;
     font-weight: 400;
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
     text-align: right;
     margin: 40px 80px 0 0;
@@ -732,7 +769,6 @@ footer h2{
     font-size: 14px;
     font-weight: 400;
     color: #000;
-    font-family: 'Roboto Mono', monospace;
     letter-spacing: -1px;
     line-height: 22px;
 }
@@ -784,6 +820,21 @@ footer h2{
     .box-newsletter input[type=submit]{padding: 25px;}
     footer ul li a, footer h2{font-size: 22px; line-height:44px;}
     footer .back-top{font-size: 24px;}
+
+    /* Formulario de compra */
+    .col-left .box-image-product-form{width: 45%;}
+    .detail h2, .detail h3{font-size: 30px; margin-bottom: 15px;}
+    .detail #price, .detail ul li, .formulario h2{font-size: 40px;}
+    .formulario-compra > input[type=text], .formulario-compra > input[type=email]{width: 35%; font-size: 25px;}
+
+    #card-front, #card-back{width: 500px; height: 45%;}
+    .box-card-number #card-number{font-size: 30px;}
+    .datos-fijos{font-size: 16px;}
+    .card-info #card-name, .card-info #expire-date{font-size: 20px;}
+
+    /* Modal final */
+    .modal-2 h2{margin: 12% auto 4% auto; font-size: 26px; line-height: 26px;}
+    .boton-modal {margin: 50px auto 20px auto;}
 }
 @media screen and (max-width: 768px) and (min-width: 320px){
     /* Modal */
@@ -810,6 +861,8 @@ footer h2{
     .box-icon h1{font-size: 12px;}
     .box-icon img{max-width: 18px;}
 
+    /* Carrito */
+    #cart{width: 100%;}
     /* Shop */
     .main-shop{margin-bottom: 20px;}
     .box-shop-image img {max-width: 90%;}

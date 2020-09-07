@@ -8,3 +8,14 @@ btnBuyNow.addEventListener("click", function(e){
   var nombreUsuario = datosUsuario.split('@')[0]; 
   document.getElementById('name').innerText = nombreUsuario;
 })
+
+// Abrir carrito
+  cart = document.getElementById('box-cart')
+  cart.addEventListener("click", function(c){
+    document.getElementById('cart').style.display='block';
+})
+
+  closeCart = document.getElementById('continue')
+  closeCart.addEventListener('click', function(){
+    document.getElementById('cart').style.display='none';
+})
