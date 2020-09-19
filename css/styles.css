@@ -319,8 +319,7 @@ input:focus{
 .products .unity{
     margin: 30px 0;
 }
-
-.unity a:hover{opacity: 70%;}
+.unity a:hover{opacity: 60%;}
 
 .products .name-product{
     font-size: 16px;
@@ -343,6 +342,19 @@ input:focus{
     max-width: 70%;
 }
 
+/* VIDEO */
+.box-video{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.box-video video{
+    max-width: 50%;
+    padding-top: 40px;
+}
+
+/* NEWSLETTER */
 .box-newsletter{
    width: 100%;
    height: 25vh;
@@ -583,8 +595,12 @@ form{
     border-radius: 1rem;
     cursor: pointer;
     display: block;
+    animation: showCard .7s;
 }
-
+@keyframes showCard{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
 .box-logo-card{
     width: 100%;
     display: flex;
@@ -647,6 +663,11 @@ form{
     align-content: center;
     flex-wrap: wrap;
     cursor: pointer;
+    animation: showCard .7s;
+}
+@keyframes showCard{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 .box-card-code{
@@ -688,7 +709,6 @@ form{
     animation: modal-2 .6s;
 
 }
-
 @keyframes modal-2{
     0%{opacity: 0; }
     100%{opacity: 1;}
@@ -778,8 +798,6 @@ footer h2{
     margin: 30px 0 0 80px;
 }
 
-
-
 /* Mobile S, M, L */
 @media screen and (min-width: 1500px) and (max-width: 2600px){
     /* Modal */
@@ -815,6 +833,8 @@ footer h2{
     #volume, #size, #color{padding: 10px; font-size: 20px;}
     .col-right .buttons a{font-size: 22px; padding: 15px 50px;}
 
+    /* Video */
+    .box-video video{max-width: 80%;}
     /* Footer */
     .box-newsletter input{padding: 25px 40px; font-size: 22px;}
     .box-newsletter input[type=submit]{padding: 25px;}
@@ -836,7 +856,7 @@ footer h2{
     .modal-2 h2{margin: 12% auto 4% auto; font-size: 26px; line-height: 26px;}
     .boton-modal {margin: 50px auto 20px auto;}
 }
-@media screen and (max-width: 768px) and (min-width: 320px){
+@media screen and (max-width: 992px) and (min-width: 320px){
     /* Modal */
     #welcome-modal .modal{height: 70%; width: 80%;}
     .form-modal h1{font-size: 16px; margin: 1rem 0;}
@@ -879,7 +899,7 @@ footer h2{
     .col-left{width: 100%; height: auto;}
     .col-left .box-image-product{max-width: 60%;}
     .col-right{width: 100%; height: 100vh;}
-    .col-right h1{font-size: 30px; text-align: center;}
+    .col-right h1{font-size: 30px; text-align: center; margin-top: 50px;}
     .col-right #priceProduct{text-align: center;}
     .form{width: 80%;}
     #volume, #size, #color{width: 50%;}
@@ -887,12 +907,16 @@ footer h2{
 
     /* Formulario de compra */
     .col-right .container-card{height: 55vh; width: 90%;}
-    #card-front, #card-back{height: 70%;}
+    #card-front, #card-back{height: 80%;}
 
     /* Modal final */
     #congrat-modal .modal-2{height: 80%; width: 80%;}
     .modal-2 h2{width: 90%; margin: 0 auto;}
     .boton-modal a{margin: 0.7rem 0;}
+
+    
+    /* Video */
+    .box-video video{max-width: 80%;}
 
     /* Footer */
     .box-newsletter{margin-top: 50px;}

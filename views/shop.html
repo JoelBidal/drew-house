@@ -37,7 +37,7 @@
         </div> 
     </nav>
     <section class="main-shop">
-        <div class="box-shop-image">
+        <div class="box-shop-image" id="shop-image">
             <img src="../assets/img/resources/shop-header.jpg" alt="Imagen de campaña">
         </div>
     </section>
@@ -58,6 +58,10 @@
         <div class="products" id="products">
             <!-- Traigo los productos desde JavaScript -->
         </div>
+        <div class="box-video">
+            <video src="../assets/videos/drew-team.webm" preload="metadata" loop muted autoplay></video>
+        </div>
+
         <div class="box-newsletter">
             <form action="#" method="POST">
                 <input type="email" name="email" placeholder="email" required>
@@ -82,6 +86,7 @@
     <!-- jQuery -->
     <script src="../js/jquery.min.js"></script>
     <!-- Javascript -->
+    <script src="../js/db.js"></script>
     <script src="../js/shop.js"></script>
 </body>
 </html>

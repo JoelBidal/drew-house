@@ -29,13 +29,11 @@ enviarUsuario.addEventListener("click", function(event){
 })
 };
 
-  // Abrir carrito
-  cart = document.getElementById('box-cart');
-  cart.addEventListener("click", function(c){
-    document.getElementById('cart').style.display='block';
+// Abrir carrito
+$("#box-cart").click(function() {
+  $("#cart").toggle();
 });
   // Cerrar carrito
-  closeCart = document.getElementById('continue');
-  closeCart.addEventListener('click', function(){
-    document.getElementById('cart').style.display='none';
+$("#continue").click(function() {
+  $("#cart").toggle(300);
 });

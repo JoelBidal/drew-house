@@ -68,12 +68,12 @@
             <div class="formulario">
                 <h2>Hey, complete the form!</h2>
                 <form class="formulario-compra" action="#" method="post">
-                    <input type="text" name="name" id="medium" placeholder="full name" required><br>
+                    <input type="text" maxlength="22" name="name" id="medium" placeholder="full name" required oninput="Name(this);"><br>
                     <input type="text" name="country" id="medium" placeholder="country" required><br>
-                    <input type="text" name="card-number" id="large" placeholder="card number" required><br>
-                    <input type="text" name="expiration" id="medium" placeholder="expiration date" required><br>
-                    <input type="text" name="security-code" id="medium" placeholder="security code" required><br>
-                    <input type="email" name="email" id="large" placeholder="email adress" required>
+                    <input type="text" maxlength="16" name="card-number" id="medium" placeholder="card number" required oninput="maxlengthNumber(this);"><br>
+                    <input type="text" maxlength="5" name="expiration" id="medium" placeholder="expiration date" required oninput="Date(this);"><br>
+                    <input type="text" maxlength="3" name="security-code" id="security" class="security-code" placeholder="security code" required oninput="Code(this);"><br>
+                    <input type="email" name="email" id="medium" placeholder="email adress" required>
                 </form>
             </div>
         </div>
@@ -84,20 +84,20 @@
                         <img src="../assets/img/resources/mastercard.png" alt="Card credit logo">
                     </div>
                     <div class="box-card-number">
-                        <span id="card-number">1200 2312 3103 1230</span>
+                        <span id="card-number">XXXX XXXX XXXX XXXX</span>
                     </div>
                     <div class="datos-fijos">
                         <h2>card name</h2>
                         <h2>valid date</h2>
                     </div>
                     <div class="card-info">
-                        <span id="card-name">Mauricio Estollmer</span>
-                        <span id="expire-date">04/23</span>
+                        <span id="card-name">XXXX XXXX</span>
+                        <span id="expire-date">XX/XX</span>
                     </div>
                 </div>
                 <div id="card-back">
                     <div class="box-card-code">
-                        <span id="security-code">404</span>
+                        <span id="security-code">XXX</span>
                     </div>
                     <div class="box-logo-card">
                         <img src="../assets/img/resources/mastercard.png" alt="Card credit logo">
@@ -112,6 +112,7 @@
         <!-- jQuery -->
         <script src="../js/jquery.min.js"></script>
         <!-- Javascript -->
+        <script src="../js/db.js"></script>
         <script src="../js/form.js"></script>
     </body>
 </html>

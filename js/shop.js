@@ -1,22 +1,10 @@
-// Datos con los productos de la tienda
-var productosJSON = `[
-  {"nombre":"secret ss tee -white", "precio":48.00, "imagen":"../assets/img/clothes/00.jpg", "categoria": "shirts all"},
-  {"nombre":"corduroy ss shirt - chocolate", "precio":148.00, "imagen":"../assets/img/clothes/01.jpg", "categoria": "shirts all"},
-  {"nombre":"corduroy shorts - chocolate", "precio":138.00, "imagen":"../assets/img/clothes/02.jpg", "categoria": "jeans all"},
-  {"nombre":"striped mascot socks - black/golden", "precio":20.00, "imagen":"../assets/img/clothes/03.jpg", "categoria": "accessories all"},
-  {"nombre":"distressed jean - vintage indigo", "precio":278.00, "imagen":"../assets/img/clothes/04.jpg", "categoria": "jeans all"},
-  {"nombre":"mascot skate deck - iceberg roses", "precio":58.00, "imagen":"../assets/img/clothes/05.jpg", "categoria": "accessories all"},
-  {"nombre":"mixed media trucker jacket - bleached", "precio":448.00, "imagen":"../assets/img/clothes/06.jpg", "categoria": "hoodies all"},
-  {"nombre":"drew house space sticker sheet", "precio":10.00, "imagen":"../assets/img/clothes/07.jpg", "categoria": "accessories all"},
-  {"nombre":"dinodrew skate deck - burnt oronge", "precio":58.00, "imagen":"../assets/img/clothes/08.jpg", "categoria": "accessories all"}
-]`;
-
 class producto {
-  constructor(nombre, precio, imagen, categoria) {
+  constructor(nombre, precio, imagen, categoria, id) {
     this.nombre = nombre;
     this.precio = precio;
     this.imagen = imagen;
     this.categoria = categoria;
+    this.id = id;
   }
 }
   
@@ -25,7 +13,7 @@ var productos;
 window.onload = () => {
   let datosJSON = JSON.parse(productosJSON);
   productos = datosJSON.map((object) => {
-    return new producto(object.nombre, object.precio, object.imagen, object.categoria);
+    return new producto(object.nombre, object.precio, object.imagen, object.categoria, object.id);
   });
   
   const sortBy = document.getElementById('sortBy');
@@ -55,19 +43,25 @@ window.onload = () => {
 // Agregando los productos al HTML
 function crearProducto(producto) {
   return `<div class="product-00 unity">
-  <a href="../views/product.html"><img src="${producto.imagen}" alt="short"></a>
+  <a href="../views/product.html"><img class="img-producto" id="${producto.id}" src="${producto.imagen}" alt="short"></a>
   <h2 class="name-product">${producto.nombre}</h2>
   <span class="price-product">$${producto.precio}.00</span>
   </div>`;
 }
 
   // Abrir carrito
-  cart = document.getElementById('box-cart')
-  cart.addEventListener("click", function(c){
-    document.getElementById('cart').style.display='block';
-})
+$("#box-cart").click(function() {
+  $("#cart").toggle();
+});
+  // Cerrar carrito
+$("#continue").click(function() {
+  $("#cart").toggle(300);
+});
 
-  closeCart = document.getElementById('continue')
-  closeCart.addEventListener('click', function(){
-    document.getElementById('cart').style.display='none';
-})
+// Back to the top 
+$('.back-top').click( function(e) { 
+  e.preventDefault();
+  $('html, body').animate({
+  scrollTop: $("#shop-image").offset().top - "100"
+  }, 1000);
+} );

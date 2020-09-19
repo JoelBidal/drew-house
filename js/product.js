@@ -9,12 +9,18 @@ agregarCarrito.addEventListener("click", (e) => {
 });
 
 // Abrir carrito
-  cart = document.getElementById('box-cart')
-  cart.addEventListener("click", function(c){
-    document.getElementById('cart').style.display='block';
-})
-
-  closeCart = document.getElementById('continue')
-  closeCart.addEventListener('click', function(){
-    document.getElementById('cart').style.display='none';
-})
+$("#box-cart").click(function() {
+  $("#cart").toggle();
+});
+  // Cerrar carrito
+$("#continue").click(function() {
+  $("#cart").toggle(300);
+});
+  
+// Back to the top 
+$('.back-top').click( function(e) { 
+  e.preventDefault();
+  $('html, body').animate({
+  scrollTop: $("#product-top").offset().top - "100"
+  }, 1000);
+} );
