@@ -65,3 +65,28 @@ $('.back-top').click( function(e) {
   scrollTop: $("#shop-image").offset().top - "100"
   }, 1000);
 } );
+
+// AJAX
+$('#show').click( function(e) { 
+  e.preventDefault()
+  $('#show').toggle()
+  $('#team').css("display", "flex")
+    $.ajax({
+      url: 'https://randomuser.me/api/?results=8',
+      dataType: 'json',
+      success: function(data) {
+      // console.log(data);
+      data.results.forEach(element => {
+        $('#team').append(`
+        <div class="box-users">
+          <img src="${element.picture.large}" alt="User image"> 
+          <div>
+            <h4 class="name-user">${element.name.first}</h4>
+            <p class="location-user">${element.location.country}</p>
+          </div>
+        </div>
+        `)
+      });
+    }
+  });
+})
