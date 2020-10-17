@@ -24,7 +24,7 @@ window.onload = () => {
   productos.forEach((producto) => {
     productosColeccion.innerHTML += crearProducto(producto);
   });
-
+// Filtro de productos en el Shop
   sortBy.addEventListener('change', event => {
   event.preventDefault();
     
@@ -34,6 +34,7 @@ window.onload = () => {
     return producto.categoria.toLowerCase().includes(resultadoFiltro.toLowerCase())
   })
 
+  // Limpio el shop y luego imprimo los productos filtrados con el input
   productosColeccion.innerHTML = '';
   productosElegidos.forEach(producto => {productosColeccion.innerHTML += crearProducto(producto);})
   console.log(productosElegidos)
@@ -43,10 +44,18 @@ window.onload = () => {
 // Agregando los productos al HTML
 function crearProducto(producto) {
   return `<div class="product-00 unity">
-  <a href="../views/product.html"><img class="img-producto" id="${producto.id}" src="${producto.imagen}" alt="short"></a>
+  <a href="product.html"><img class="img-producto" onclick='viewMore("${producto.id}")' id="${producto.id}" src="${producto.imagen}" alt="short"></a>
   <h2 class="name-product">${producto.nombre}</h2>
   <span class="price-product">$${producto.precio}.00</span>
   </div>`;
+}
+
+// Escuchar el producto que el usuario selecciona en el Shop y luego guardarlo en Local Storage
+function viewMore(id){
+  const product = productos.filter(item => item.id === id)[0]
+  const productToString = JSON.stringify(product);
+// Envio el producto a Local Storage 
+  localStorage.setItem('product', productToString);
 }
 
   // Abrir carrito
@@ -65,28 +74,3 @@ $('.back-top').click( function(e) {
   scrollTop: $("#shop-image").offset().top - "100"
   }, 1000);
 } );
-
-// AJAX
-$('#show').click( function(e) { 
-  e.preventDefault()
-  $('#show').toggle()
-  $('#team').css("display", "flex")
-    $.ajax({
-      url: 'https://randomuser.me/api/?results=8',
-      dataType: 'json',
-      success: function(data) {
-      // console.log(data);
-      data.results.forEach(element => {
-        $('#team').append(`
-        <div class="box-users">
-          <img src="${element.picture.large}" alt="User image"> 
-          <div>
-            <h4 class="name-user">${element.name.first}</h4>
-            <p class="location-user">${element.location.country}</p>
-          </div>
-        </div>
-        `)
-      });
-    }
-  });
-})

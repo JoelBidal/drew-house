@@ -1,3 +1,27 @@
+// Busca el producto elegido en Local Storage para seguidamente mostrarlo en pantalla
+const product = JSON.parse(localStorage.getItem('product'));
+(function(obj){
+  let productDetail = document.getElementById('product-detail')
+  // Imprimo el producto
+  return productDetail.innerHTML = 
+  `
+    <div class="box-image-product-form">
+        <img class="img-selected" src="${obj.imagen}" alt="${obj.nombre}">
+    </div>
+    <div class="detail">
+        <h2>${obj.nombre}</h2>
+        <span id="price">$${obj.precio},00</span>
+        <h3>purchasing information</h3>
+        <ul>
+            <li>1 vol</li>
+            <li>XL</li>
+            <li>white</li>
+        </ul>
+    </div> 
+  `
+})(product)
+
+
 // Imprimir número en la tarjeta de crédito 
 function maxlengthNumber (obj){
   if (obj.value.length > obj.maxlength){
@@ -43,7 +67,7 @@ campos.addEventListener("click", function(){
   cardBack.style.display='none';
 })
 
-  // Imprimir codigo en la tarjeta de crédito 
+// Imprimir codigo en la tarjeta de crédito 
 function Code (obj4){
   if (obj4.value.length > obj4.code){
     obj4.value = obj4.value.slice(0, obj4.code);
